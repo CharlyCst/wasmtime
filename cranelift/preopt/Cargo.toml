@@ -6,7 +6,6 @@ description = "Support for optimizations in Cranelift"
 license = "Apache-2.0 WITH LLVM-exception"
 documentation = "https://docs.rs/cranelift-preopt"
 repository = "https://github.com/bytecodealliance/wasmtime"
-categories = ["no-std"]
 readme = "README.md"
 keywords = ["optimize", "compile", "compiler", "jit"]
 edition = "2021"
@@ -20,7 +19,7 @@ cranelift-codegen = { path = "../codegen", version = "0.86.0", default-features 
 [features]
 default = ["std"]
 std = ["cranelift-codegen/std"]
-core = ["cranelift-codegen/core"]
+restricted-std = ["cranelift-codegen/restricted-std"]
 
 [badges]
 maintenance = { status = "experimental" }

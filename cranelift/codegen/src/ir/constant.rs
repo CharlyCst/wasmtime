@@ -10,7 +10,7 @@
 
 use crate::ir::immediates::{IntoBytes, V128Imm};
 use crate::ir::Constant;
-use crate::HashMap;
+use std::collections::HashMap;
 use alloc::collections::BTreeMap;
 use alloc::vec::Vec;
 use core::fmt;

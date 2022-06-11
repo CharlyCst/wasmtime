@@ -10,7 +10,7 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
-use super::{HashMap, HashSet};
+use std::collections::{HashMap, HashSet};
 use core::default::Default;
 use core::hash::{BuildHasherDefault, Hash, Hasher};
 use core::ops::BitXor;

@@ -5,7 +5,6 @@ authors = ["The Cranelift Project Developers"]
 description = "Interpret Cranelift IR"
 repository = "https://github.com/bytecodealliance/wasmtime"
 documentation = "https://docs.rs/cranelift-interpreter"
-categories = ["no-std"]
 license = "Apache-2.0 WITH LLVM-exception"
 readme = "README.md"
 edition = "2021"

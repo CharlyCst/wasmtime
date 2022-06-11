@@ -1,6 +1,6 @@
 use crate::ir::{SourceLoc, ValueLabel};
 use crate::machinst::Reg;
-use crate::HashMap;
+use std::collections::HashMap;
 use alloc::vec::Vec;
 use core::cmp::Ordering;
 use core::convert::From;

@@ -36,7 +36,6 @@
         clippy::use_self
     )
 )]
-#![no_std]
 // Various bits and pieces of this crate might only be used for one platform or
 // another, but it's not really too useful to learn about that all the time. On
 // CI we build at least one version of this crate with `--features all-arch`
@@ -45,18 +44,7 @@
 // everything down.
 #![cfg_attr(not(feature = "all-arch"), allow(dead_code))]
 
-#[allow(unused_imports)] // #[macro_use] is required for no_std
-#[macro_use]
 extern crate alloc;
-
-#[cfg(feature = "std")]
-#[macro_use]
-extern crate std;
-
-#[cfg(not(feature = "std"))]
-use hashbrown::{hash_map, HashMap, HashSet};
-#[cfg(feature = "std")]
-use std::collections::{hash_map, HashMap, HashSet};
 
 pub use crate::context::Context;
 pub use crate::value_label::{ValueLabelsRanges, ValueLocRange};

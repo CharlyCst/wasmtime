@@ -6,7 +6,7 @@ description = "Translator from WebAssembly to Cranelift IR"
 documentation = "https://docs.rs/cranelift-wasm"
 repository = "https://github.com/bytecodealliance/wasmtime"
 license = "Apache-2.0 WITH LLVM-exception"
-categories = ["no-std", "wasm"]
+categories = ["wasm"]
 readme = "README.md"
 keywords = ["webassembly", "wasm"]
 edition = "2021"
@@ -31,7 +31,7 @@ cranelift-codegen = { path = "../codegen", version = "0.86.0", default-features 
 [features]
 default = ["std"]
 std = ["cranelift-codegen/std", "cranelift-frontend/std"]
-core = ["hashbrown", "cranelift-codegen/core", "cranelift-frontend/core"]
+restricted-std = ["cranelift-codegen/restricted-std", "cranelift-frontend/restricted-std"]
 enable-serde = ["serde"]
 
 [badges]

@@ -12,7 +12,7 @@ use crate::ir::{
 };
 use crate::packed_option::ReservedValue;
 use crate::write::write_operands;
-use crate::HashMap;
+use std::collections::HashMap;
 use alloc::vec::Vec;
 use core::fmt;
 use core::iter;

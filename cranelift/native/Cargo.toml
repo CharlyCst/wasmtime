@@ -5,7 +5,6 @@ authors = ["The Cranelift Project Developers"]
 description = "Support for targeting the host with Cranelift"
 documentation = "https://docs.rs/cranelift-native"
 repository = "https://github.com/bytecodealliance/wasmtime"
-categories = ["no-std"]
 license = "Apache-2.0 WITH LLVM-exception"
 readme = "README.md"
 edition = "2021"
@@ -20,7 +19,7 @@ libc = "0.2.95"
 [features]
 default = ["std"]
 std = ["cranelift-codegen/std"]
-core = ["cranelift-codegen/core"]
+restricted-std = ["cranelift-codegen/restricted-std"]
 
 [badges]
 maintenance = { status = "experimental" }

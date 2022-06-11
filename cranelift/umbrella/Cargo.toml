@@ -6,7 +6,6 @@ description = "Umbrella for commonly-used cranelift crates"
 license = "Apache-2.0 WITH LLVM-exception"
 documentation = "https://docs.rs/cranelift"
 repository = "https://github.com/bytecodealliance/wasmtime"
-categories = ["no-std"]
 readme = "README.md"
 keywords = ["compile", "compiler", "jit"]
 edition = "2021"
@@ -18,7 +17,7 @@ cranelift-frontend = { path = "../frontend", version = "0.86.0", default-feature
 [features]
 default = ["std"]
 std = ["cranelift-codegen/std", "cranelift-frontend/std"]
-core = ["cranelift-codegen/core", "cranelift-frontend/core"]
+restricted-std = ["cranelift-codegen/restricted-std", "cranelift-frontend/restricted-std"]
 
 [badges]
 maintenance = { status = "experimental" }

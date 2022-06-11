@@ -26,22 +26,7 @@
         clippy::use_self
     )
 )]
-#![no_std]
 
-#[cfg(not(feature = "std"))]
-#[macro_use]
-extern crate alloc as std;
-#[cfg(feature = "std")]
-#[macro_use]
-extern crate std;
-
-#[cfg(not(feature = "std"))]
-use hashbrown::{
-    hash_map,
-    hash_map::Entry::{Occupied, Vacant},
-    HashMap,
-};
-#[cfg(feature = "std")]
 use std::collections::{
     hash_map,
     hash_map::Entry::{Occupied, Vacant},

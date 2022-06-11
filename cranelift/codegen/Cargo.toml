@@ -6,7 +6,6 @@ description = "Low-level code generator library"
 license = "Apache-2.0 WITH LLVM-exception"
 documentation = "https://docs.rs/cranelift-codegen"
 repository = "https://github.com/bytecodealliance/wasmtime"
-categories = ["no-std"]
 readme = "README.md"
 keywords = ["compile", "compiler", "jit"]
 build = "build.rs"
@@ -41,14 +40,12 @@ miette = { version = "4.7.0", features = ["fancy"], optional = true }
 [features]
 default = ["std", "unwind"]
 
-# The "std" feature enables use of libstd. The "core" feature enables use
-# of some minimal std-like replacement libraries. At least one of these two
-# features need to be enabled.
+# The "std" feature enables use of libstd. The "restricted-std" feature enables
+# use of some minimal std on targets not supporting the full implementation. At
+# least one of these two features need to be enabled.
 std = []
 
-# The "core" features enables use of "hashbrown" since core doesn't have
-# a HashMap implementation, and a workaround for Cargo #4866.
-core = ["hashbrown"]
+restricted-std = []
 
 # This enables some additional functions useful for writing tests, but which
 # can significantly increase the size of the library.

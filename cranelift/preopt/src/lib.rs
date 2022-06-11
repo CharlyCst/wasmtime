@@ -17,7 +17,6 @@
         clippy::use_self
     )
 )]
-#![no_std]
 
 mod constant_folding;
 
